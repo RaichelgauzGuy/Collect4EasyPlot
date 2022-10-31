@@ -20,6 +20,8 @@ def collect(data: Any, name: str):
 
 def clear_all():
     easy_plot_data_dir = os.path.join(TMP_PATH, "EasyPlotDataGrabber")
+    if not os.path.exists(easy_plot_data_dir):
+        return
     for filename in os.listdir(easy_plot_data_dir):
         file_path = os.path.join(easy_plot_data_dir, filename)
         try:

@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="collect4easyplot",
-    version="0.13",
+    version="0.14",
     description="A complementary library for using EasyPlot with Python",
     author="Guy Raichelgauz",
     author_email="guy.raichelgauz@gmail.com",
