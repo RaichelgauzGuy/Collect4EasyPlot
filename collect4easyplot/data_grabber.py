@@ -3,8 +3,10 @@ import shutil
 import pickle
 from typing import Any
 
-TMP_PATH = os.environ.get("TEMP")
+if os.environ.get("TEMP") is None:
+    os.environ["TEMP"] = f"{os.getcwd()}/temp"
 
+TMP_PATH = os.environ["TEMP"]
 
 def collect(data: Any, name: str):
     """ Dump data to file object in TEMP dir. Supposed to be used by EasyPlot """
